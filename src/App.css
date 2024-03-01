@@ -1,0 +1,74 @@
+.app-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-top,
+.tooltip-bottom {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-right,
+.tooltip-left {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-top {
+  bottom: 100%;
+}
+
+.tooltip-right {
+  left: 100%;
+}
+
+.tooltip-left {
+  right: 100%;
+}
+
+.tooltip-bottom {
+  top: 100%;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+button {
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+button:hover {
+  background-color: #2980b9;
+}
